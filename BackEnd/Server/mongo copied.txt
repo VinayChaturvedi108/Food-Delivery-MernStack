@@ -1,0 +1,10 @@
+mongodb+srv://kumarvinay96419:<password>@cluster0.yrdeokg.mongodb.net/
+mongodb+srv://kumarvinay96419:<password>@cluster0.yrdeokg.mongodb.net/?retryWrites=true&w=majority
+
+npm init -y
+npm i express 
+npm i dotenv
+
+mongodb+srv://vinaykashyap7206:<password>@cluster0.nck4v50.mongodb.net/?retryWrites=true&w=majority
+
+mongodb+srv://vinaykashyap7206:<password>@cluster0.nck4v50.mongodb.net/?retryWrites=true&w=majority

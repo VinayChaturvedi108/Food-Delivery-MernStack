@@ -1,0 +1,1212 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* //Navbar// */
+#nav{
+  margin-left: auto;
+}
+/* //Nav logo// */
+.main_img{
+  height:100px;
+  width: 150px;
+}
+.nav-shad {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ////Login page//// */
+.login-container {
+  background: linear-gradient(to bottom, #542303, #f9f9f9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  color: #522303;
+}
+
+.input-field {
+  background-color: #f9f9f9;
+  border-color: #542303;
+  color: #542303;
+}
+
+.login-button {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border-color: #542303;
+  color: #542303;
+}
+
+.login-button:hover {
+  background-color: #542303;
+  color: #f9f9f9;
+}
+.lebel{
+  font-size: 20px;
+  float: left;
+}
+
+
+/* *****Signup Page***** */
+
+.registration-page {
+  background: linear-gradient(to bottom, #633117, #a56038, #f0d4bf);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.registration-container .Form.Control {
+  margin-bottom: 30px; /* Adjust the value as per your preference */
+}
+
+.brown-text {
+  color: #592c15;
+}
+
+.brown-text1 {
+  color: #592c15;
+  font-size: 20px;
+  float: left;
+}
+
+.brown-button {
+  background-color: #f5e8de;
+  color: #592c15;
+  border-color: #592c15;
+}
+
+.brown-button:hover {
+  background-color: #592c15;
+  color: #f5e8de;
+}
+
+
+@media (max-width: 576px) {
+  .registration-container {
+    padding: 10px;
+  }
+}
+
+
+/***HOME page CSS***** */
+/* section1 */
+.first-section {
+  background-color: #592c15;
+  color: #fff;
+  padding: 30px 0;
+  box-shadow: 0 2px 4px #eae4e1;
+
+}
+
+.welcome-text {
+  font-size: 36px;
+  text-align: center;
+}
+
+/* 
+.slider-container {
+  display: flex;
+  margin-right: 50px;
+  margin-left: 50px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+} 
+
+
+.slider-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 30px;
+  position: relative;
+}
+
+.slider-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 340px;
+  transition: transform 0.3s ease-in-out;
+}
+.slider-item:hover img{
+  transform: scale(1.0);
+}
+.first-imgmr{
+  margin-left: 50px;
+}  */
+
+
+/* Responsive Styles */
+
+/* @media (max-width: 1200px) {
+  .slider-item {
+    margin-right: 20px;
+  }
+  .slider-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-item {
+    margin-right: 15px;
+  }
+  .slider-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-item {
+    margin-right: 10px;
+  }
+  .slider-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .slider-item {
+    margin-right: 5px;
+  }
+}  */
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .slider-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .slider-item {
+    margin-right: 5px;
+  }
+  .slick-slide img{
+    display: inline;
+    width:400px
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .slider-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .slider-item {
+    margin-right: 10px;
+  }
+  .slick-slide img{
+    display: inline;
+    width:380px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .slider-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .slider-item {
+    margin-right: 20px;
+  }
+  .slick-slide img{
+    display: inline;
+    width:380px
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .slider-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .slider-item {
+    margin-right: 30px;
+  }
+  /* .slick-slide img{
+    display: inline;
+    width:380px
+  } */
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .slider-container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .slider-item {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .slider-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .slider-item {
+    margin-right: 100px;
+  }
+}
+
+/* Main */
+/* section2 */
+.page {
+  /* background-color: #e1c6b6; */
+  background: linear-gradient(to bottom, #592c15, #ad7351, #f5e8de);
+  padding: 20px;    
+  
+}
+
+.row-container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 135px;
+  margin-right: 135px;
+  margin-bottom: 31px;
+  flex-wrap: wrap;   /* Allow items to wrap to a new line */
+  gap: 20px;
+}
+
+.image-container {
+
+  width: 295.6px;
+  height: 330.6px;
+  /* background-color: #fff; */
+  /* padding: 10px; */
+  box-shadow: 1px 2px 11px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  /* margin-right: 30px; */
+  margin-right: 0; 
+  flex: 1;
+  max-width: calc(25% - 20px); /* Set max width to 25% - gap */
+  box-sizing: border-box; 
+  position: relative; /* Add relative positioning */
+  /* transition: transform 0.6s ease-in-out, z-index 0.6s ease-in-out; */
+  /* overflow: hidden; */
+  /* transition: transform 0.6s ease-in-out; */
+}
+
+.image-container:hover{
+  /* transform: scale(1.03); */
+  border: 4px solid rgb(244, 240, 236);
+}
+.image-section img {
+  width: 270px;
+  height: 180px;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+.info-section {
+  /* margin-top: 20px; */
+  padding: 10px;
+  color: #0b0a0a;
+  text-decoration-style: none;
+}
+
+.info-section h4 {
+  float: left;
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 10px;
+
+}
+
+.info-section p {
+  font-size: 16px;
+  padding: 5px;
+
+  margin-bottom: 5px;
+}    
+
+
+
+@media (max-width: 1280px){
+  .row-container{
+    margin-left: -17px;
+  }
+}
+@media (max-width: 768px) {
+  .row-container {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: auto;
+    /* justify-content: center; Center items horizontally */
+    /* align-items: center; Center items vertically */
+    /* gap: 10px; Reduce the gap between columns */
+    /* flex-direction: column;  */
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px;
+  }
+}
+/* Responsive Styles */
+
+/*********** About Component*********** */
+.about-page {
+  padding: 50px 0;
+}
+
+.about-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+/* Footer Component */
+.Down{
+  background-color: black;
+  color:#ffffff;
+  height: 150px;
+}
+
+.style{
+  display: flex;
+  justify-content: space-around;
+}
+
+.style p{
+  font-weight: 600;
+  margin-top: 60px;
+}
+
+.f_img{
+  height:100px;
+  width: 100px;
+  margin-top: 40px;
+}
+.fb_img{
+  height:40px;
+  width: 40px;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.insta_img{
+  height:40px;
+  width: 40px;
+  margin-top: 40px;
+}
+.id-link{
+  display: flex;
+
+}
+
+
+/* OwnerRegistrationButton */
+/* OwnerRegistrationButton.css */
+.custom-button {
+  background-color: #8B4513;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+}
+
+/* Signp Model btn for choosing */
+/* SignUpModal.css */
+.sign-up-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Add any additional styling as needed */
+/* Profile.css */
+.profile-container {
+  background: linear-gradient(to bottom, #84401d, #ad7351, #f5e8de);
+  max-width: 980px;
+  max-height: auto;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.profile-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #282c34;
+  flex: 1;
+  min-width: 800px;
+  min-height: 50px;
+  max-width: 850px;
+}
+
+
+.profile-heading {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+
+#loc {
+  min-height: 70px;
+}
+
+.input {
+  /* Other styles for input */
+  width: 100%;
+  padding: 10px;
+}
+
+.profile-box:hover {
+  border: 3px solid brown;
+}
+
+
+.editBtn{
+  display: flex;
+}
+
+.edit-button{
+  margin-left: 650px;
+
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.save-button,
+.cancel-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+}
+
+strong {
+  margin-right: 30px;
+}
+
+/* Profile box inner text */
+.content {
+  display: flex;
+  float: left;
+}
+
+.logout-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 10px;
+    max-height: none;
+    flex: none;
+    max-width: 100%;
+  }
+
+  .profile-info {
+    padding: 10px;
+    flex: none;
+  }
+
+  .profile-box {
+    padding: 5px;
+    flex: none;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-button,
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+
+  .logout-button {
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+  }
+}
+
+/* /////////////// */
+/* OwnProfile.css */
+/* AddMenuPopup.css */
+.add-menu-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 9999; /* Set a high z-index to bring the popup to the front */
+}
+
+.add-menu-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  backdrop-filter: blur(5px); /* Apply the blur effect */
+}
+
+.add-menu-popup-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 90%;
+  display: inline-table;
+}
+
+.add-menu-popup h2 {
+  margin-bottom: 20px;
+}
+
+.add-menu-popup label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-menu-popup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.add-menu-popup button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-menu-popup button:last-child {
+  margin-right: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .add-menu-popup-content {
+    max-width: 300px;
+  }
+}
+
+/******Profile and OwnProfile component*******/
+.add-menu-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  z-index: 9999; /* Set a high z-index to bring the popup to the front */
+}
+
+.add-menu-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  backdrop-filter: blur(5px); /* Apply the blur effect */
+}
+
+.add-menu-popup-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.add-menu-popup h2 {
+  margin-bottom: 20px;
+}
+
+.add-menu-popup label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-menu-popup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.add-menu-popup button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-menu-popup button:last-child {
+  margin-right: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .add-menu-popup {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Profile box styles */
+.profile-box {
+  /* ... */
+  min-width: 800px;
+  min-height: 50px;
+  max-width: 850px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .profile-box {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-box {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-box {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/***Menu Page CSS**/
+/* Common styles */
+.menu-page {
+  padding: 20px;
+}
+
+.restaurant-info {
+  background-color: #f0f0f0;
+  padding: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.restaurant-info h1 {
+  margin: 0;
+  font-size: 24px;
+  text-shadow: 4px 5px 10px #000;
+}
+
+.opening-hours {
+  color: #888;
+}
+
+.menu-items-container {
+  border: 2px solid rgb(109, 76, 76);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.menu-item-row {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid rgb(188, 185, 185); */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; /* Align items and button to opposite ends */
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.menu-item-info{
+  display: flex;
+
+}
+.item-image {
+  margin-right: 15px;
+}
+
+.item-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  box-shadow: 6px 11px 10px #000;
+  object-fit: cover;
+}
+
+.item-details {
+  display: inline;
+  margin-top: 30px;
+}
+
+.item-name {
+  font-size: 18px;
+  margin: 0;
+}
+
+.item-price{
+  margin-top: 5px;
+  margin-left: 13px;
+  font-weight: bold;
+}
+.item-quantity {
+  margin: 5px 0;
+  color: #888;
+}
+/* Button styles */
+.add-button {
+  background-color:  rgb(209, 227, 244); /* Light brown */
+  color: #000;
+  border: 3px solid rgb(12, 73, 188); /* Brown border */
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 6px 11px 10px #000;
+}
+
+/* Cart styles */
+.cart {
+  background-color: #562807; /* Brown */
+  color: white;
+  padding: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+/* ... Your existing styles ... */
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.heading {
+  flex: 0.12; /* Expand to take available space */
+}
+.heading :hover{
+  border: 2px solid rgb(255, 255, 255);
+}
+.close-btn {
+  margin-left: auto; /* Pushes the close button to the left */
+
+}
+.close-button{
+  background-color:  rgb(245, 223, 198); /* Light brown */
+  color: #000;
+  border: 3px solid rgb(111, 49, 8); /* Brown border */
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* .cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+} */
+.cart-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-item-name{
+  float: left;
+  flex: 0; /* Expand to take available space */
+  text-align: right;
+}
+
+.cart-item-price {
+
+  font-weight: bold;
+}
+
+.cart-total {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.quantity-button {
+  background-color: #8B4513; /* Light brown */
+  color: white;
+  border: 2px solid #8B4513; /* Brown border */
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.remove-btn{
+  display: flex;
+  margin-left: 560px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+}
+
+.cart-list:hover{
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+.checkout-button{
+    background-color: aliceblue;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    flex: 0.2; /* Adjust the width for smaller screens */
+  }
+
+  .remove-btn {
+    margin-left: auto; /* Reset margin for smaller screens */
+  }
+
+  .cart-item-details {
+    flex-direction: column; /* Stack details vertically on smaller screens */
+    align-items: flex-end; /* Align details to the right */
+  }
+
+  .cart-item-name {
+    text-align: right; /* Align name to the right */
+  }
+}
+
+/* *******Payment JS********* */
+.payment-page {
+  display: flex;
+  background-color: rgb(141, 71, 24);
+  color: black;
+  padding: 20px;
+}
+
+.side-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 370px;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-section,
+.payment-method-section {
+  /* display: flex; */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 780px;
+  height: 220px;
+  position: relative;
+  margin-left: 200px;
+  margin-right: 50px;
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 35px 40px 39px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.address-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.delivery-time {
+  font-size: 16px;
+}
+
+.payment-button {
+  background-color: rgb(135, 79, 22);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 600px;
+  width: 100%;
+}
+
+.apply-coupon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.total-amount {
+  display: block;
+  margin-top: 35px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.bill{
+  display: flex;
+  font-size: 18px;
+}
+
+.total-amount p{
+  /* display: flex; */
+  flex: 1;
+ 
+}
+
+.BillDetails{
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-list h4{
+  display: flex;
+  float: "left"
+}
+.item-list p{
+  flex:1;
+  font-size: 20px;
+  font-weight: 500;
+}
+.address{
+  display: flex;
+}
+.address-section p{
+  margin-left: 10px;
+}
+.deliveryTime{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 25px;
+  font-weight: 500;
+}
+.apply-Coupon{
+  font-weight: 500;
+  font-size: 20px;
+  color: #888;
+  font-style: oblique;
+  border: 2px solid gray;
+  border-style: dashed;
+  margin-top: 40px;
+  padding: 5px 10px;
+  max-width: 300px;
+}
+.charityBox{
+  display: flex;
+  border: 2px solid gray;
+  border-style: dashed;
+  margin-top: 40px;
+  padding: 5px 10px;
+  max-width: 300px;
+}
+.checkbox{
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.payment-itemDetails{
+  display: flex;
+}
+.payment-itemDetails p{
+  flex: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content-sections {
+    flex-direction: column; /* Stack sections vertically */
+    margin-left: 10px; /* Adjust margin for better spacing */
+    margin-right: 10px;
+  }
+
+  .address-section,
+  .payment-method-section {
+    margin-left: 0; /* Reset margin */
+    margin-right: 0;
+    width: 100%; /* Take full width on small screens */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .apply-Coupon,
+  .charityBox {
+    max-width: 100%; /* Allow content to take full width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
