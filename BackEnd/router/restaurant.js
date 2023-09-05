@@ -132,34 +132,50 @@ router.get('/ownprofile', verifyToken, async (req, res) => {
 /////////////////////////////////////////////////////////
 /////////// Route to add a new menu item//////////////
 ////////////////////////////////////////////////////////
-router.post('/addMenuItem', async (req, res) => {
-  const { email, itemImage, itemName, itemPrice } = req.body;
+router.post('/addData', async (req, res) => {
+  const { email, imageLink, itemPrice, itemName } = req.body;
+
+  if (!email || !imageLink || !itemPrice || !itemName) {
+      return res.status(400).json({ error: 'Missing required fields' });
+  }
 
   try {
-    // Verify the owner's email and password
-    const owner = await Owner.findOne({ email });
-    if (!owner ) {
-      return res.status(401).json({ error: 'Invalid email or password' });
-    }
+      let dataEntry = await Menu.findOne({ email });
 
-    // Create a new menu item and associate it with the owner's details
-    const newItem = new Menu({
-      owner: owner._id,
-      email,
-      itemImage,
-      itemName,
-      itemPrice,
-    });
+      if (!dataEntry) {
+          dataEntry = new Menu({
+              email,
+              data: [{ imageLink, itemPrice, itemName }]
+          });
+      } else {
+          dataEntry.data.push({ imageLink, itemPrice, itemName });
+      }
 
-    // Save the new menu item
-    const savedItem = await newItem.save();
-    res.json(savedItem);
+      await dataEntry.save();
+
+      res.status(201).json({ message: 'Data added successfully' });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Server error' });
+      res.status(500).json({ error: 'An error occurred' });
   }
 });
 
+
+router.get('/getDataByEmail/:email', async (req, res) => {
+  const email = req.params.email;
+
+  try {
+      const dataEntry = await Menu.findOne({ email });
+
+      if (!dataEntry) {
+          return res.status(404).json({ error: 'Data not found for the provided email' });
+      }
+
+      res.status(200).json(dataEntry.data);
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred' });
+  }
+});
 //////////////////////////////////////////////////////////////////
 ////////////////////////////Show Memu Item//////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -242,6 +258,7 @@ router.get('/home_recuire_details', async(req, res)=>{
       if (owner.userType === 'Restaurant Owner') {
         restaurantDetails.push({
           restaurantName: owner.restaurantName,
+          email:owner.email,
           deliveryTime: owner.deliveryTime,
           openingTime: owner.openingTime,
           closingTime:owner.closingTime,

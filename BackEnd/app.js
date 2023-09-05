@@ -4,7 +4,7 @@
 ////File no. 4 For authentication & stored user Schema on mongodb
 const express = require('express');
 const dotenv = require('dotenv');
-const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -14,6 +14,7 @@ require('./Server/conn') ////In this file we use the fatched value of DB & PORT 
 // const User = require('./model/userSchema')
 app.use(cookieParser());
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(require('./router/auth'));
 app.use(require('./router/restaurant'))
 

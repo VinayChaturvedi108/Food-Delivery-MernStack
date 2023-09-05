@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'; // Import Bootstrap CSS
 import {NavLink} from 'react-bootstrap';
 import React, {useEffect, useState} from 'react';
-import {  useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -47,15 +47,16 @@ const Home = ({onSetdelivery}) => {
     fetchRestaurantData();
   }, []);
 ////////////**********This is Method One from many For Passing value**********///////////////
-  const handleGoOnMenu = (restaurantName, openingTime, closingTime, deliveryTime) => {
+  const handleGoOnMenu = (restaurantName,email, openingTime, closingTime, deliveryTime) => {
     // Calculate the total amount
 
       const RestaurantNamePass = restaurantName;
+      const EmailPass = email;
       const OpeningTimePass = openingTime;
       const ClosingTimePass = closingTime;
       const deliveryTimePass = deliveryTime
-      console.log(RestaurantNamePass, ClosingTimePass, OpeningTimePass, deliveryTimePass)
-      const data = {RestaurantNamePass, OpeningTimePass, ClosingTimePass, deliveryTimePass};
+      console.log(RestaurantNamePass, EmailPass, ClosingTimePass, OpeningTimePass, deliveryTimePass)
+      const data = {RestaurantNamePass, EmailPass,OpeningTimePass, ClosingTimePass, deliveryTimePass};
     
       const handleClick = () => {
         navigate('/showMenuItem', { state: data });//////For Pass data one component to another component///////
@@ -139,7 +140,7 @@ const Home = ({onSetdelivery}) => {
         <div className="row-container">
           {restaurantData.map((restaurant, index) => (
             // <NavLink to='/menuPage'>
-            <div className="image-container" key={index} onClick={()=>handleGoOnMenu(restaurant.restaurantName, restaurant.openingTime, restaurant.closingTime, restaurant.deliveryTime)}>
+            <div className="image-container" key={index} onClick={()=>handleGoOnMenu(restaurant.restaurantName, restaurant.email, restaurant.openingTime, restaurant.closingTime, restaurant.deliveryTime)}>
               <div className="image-section">
                 {/* Render the restaurant's profileImg */}
                 <img src={restaurant.profileImg} alt="Restaurant Profile" />
@@ -156,7 +157,6 @@ const Home = ({onSetdelivery}) => {
             // </NavLink>
           ))}
         </div>
-        {/* ... More rows */}
       </div>
           {/* <div className="page">
             <div className="row-container">

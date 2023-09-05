@@ -367,7 +367,6 @@
 }
 
 .info-section {
-  /* margin-top: 20px; */
   padding: 10px;
   color: #0b0a0a;
   text-decoration-style: none;
@@ -378,7 +377,6 @@
   font-size: 16px;
   margin-bottom: 5px;
   padding: 10px;
-
 }
 
 .info-section p {
@@ -392,28 +390,25 @@
 
 @media (max-width: 1280px){
   .row-container{
-    margin-left: -17px;
-  }
-}
-@media (max-width: 768px) {
-  .row-container {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
-    overflow-x: auto;
-    /* justify-content: center; Center items horizontally */
-    /* align-items: center; Center items vertically */
-    /* gap: 10px; Reduce the gap between columns */
-    /* flex-direction: column;  */
-  }
-
-  .image-container {
     width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image-container {
+    width: calc(33.33% - 20px); /* Adjust this value for the desired number of columns */
     max-width: 300px;
     margin: 5px;
   }
+
+  .image-section img {
+    width: 100%;
+    height: auto; /* Let the height adjust automatically based on the width */
+    border-radius: 22px;
+    object-fit: cover;
+  }
+
 }
-/* Responsive Styles */
 
 /*********** About Component*********** */
 .about-page {

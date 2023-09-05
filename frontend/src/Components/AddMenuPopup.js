@@ -1,20 +1,21 @@
 import React, { useState} from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import Menu from './Menu';
 
 
 const AddMenuPopup = ({email, onClose, onSave }) => {
-  const [itemImage, setItemImage] = useState('');
+  const [imageLink, setItemImage] = useState('');
   const [itemName, setItemName] = useState('');
   const [itemPrice, setItemPrice] = useState('');
-
 
 
   const handleSave = async () => {
     try {
       // Call the onSave function with the new menu item data
-      onSave({email, itemImage, itemName, itemPrice });
+      onSave({email, imageLink, itemName, itemPrice });
 
       // Send the HTTP POST request to the backend API
-      const response = await fetch('/addMenuItem', {
+      const response = await fetch('/addData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,7 +23,7 @@ const AddMenuPopup = ({email, onClose, onSave }) => {
         },
         body: JSON.stringify({
           email,
-          itemImage,
+          imageLink,
           itemName,
           itemPrice,
         }),
@@ -30,8 +31,8 @@ const AddMenuPopup = ({email, onClose, onSave }) => {
 
       // The response will contain the saved menu item data from the backend
       const savedMenuItem = await response.json();
-      console.log('Saved menu item:', savedMenuItem);
-
+      // console.log('Saved menu item:', savedMenuItem.email, savedMenuItem.imageLink, savedMenuItem.itemName, savedMenuItem.itemPrice);
+      console.log(savedMenuItem)
       // Optionally, you can close the popup after saving the item
       onClose();
     } catch (error) {
@@ -39,6 +40,8 @@ const AddMenuPopup = ({email, onClose, onSave }) => {
       // Handle any errors that occur during the HTTP request
     }
   };
+
+
 
   return (
     <div className="add-menu-popup">
@@ -48,7 +51,7 @@ const AddMenuPopup = ({email, onClose, onSave }) => {
         <h2>Add Menu Item</h2>
         <label>
           Item Image Link:
-          <input type="text" value={itemImage} onChange={(e) => setItemImage(e.target.value)} />
+          <input type="text" value={imageLink} onChange={(e) => setItemImage(e.target.value)} />
         </label>
         <label>
           Item Name:

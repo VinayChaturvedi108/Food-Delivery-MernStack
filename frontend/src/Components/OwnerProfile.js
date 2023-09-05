@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 // import Menu from './Menu';
-import MenuPage from './MenuPage';
-// import AddMenuPopup from './AddMenuPopup';
+// import MenuPage from './MenuPage';
+import AddMenuPopup from './AddMenuPopup';
 import { useNavigate } from 'react-router-dom';
+import MenuPage from './MenuPage';
+import Main from './Main';
 
 
 const OwnProfile = ({onSetLoggedIn}) => {
   const navigate = useNavigate();
-  // const [isAddMenuPopupOpen, setAddMenuPopupOpen] = useState(false);
+  const [isAddMenuPopupOpen, setAddMenuPopupOpen] = useState(false);
   const [profileData, setProfileData] = useState({email:"jho@example.com"});
 
   // Rest of the component code
@@ -91,30 +93,30 @@ const handleLogout = async () => {
     console.log(error);
   }
 };
-const menu =()=>{
-  navigate('/showMenuItem')
-}
-// const handleAddMenu = () => {
-//   setAddMenuPopupOpen(true);
-// };
+// const menu =()=>{
+//   navigate('/showMenuItem')
+// }
+const handleAddMenu = () => {
+  setAddMenuPopupOpen(true);
+};
 return (
     <div className="profile-container">
     {/* // <div className={`profile-container${isAddMenuPopupOpen ? ' blur' : ''}`}> */}
       <div className="editBtn">
         <p className="profile-heading">Owner Profile</p>
-        {/* {profileData.email !== 'jho@example.com' &&
+        {profileData.email !== 'jho@example.com' &&
           (<button className="add-menu-button" style={{borderRadius: "5px", height: "35px", marginLeft:"580px", borderColor:"blue", borderWidth:"2px", backgroundColor:"linear-gradient(to bottom, to top, to left, to right, #1E90FF, #00BFFF"}} onClick={handleAddMenu}>
             Add Menu
           </button>)
-        } */}
-        {profileData.email !== 'jho@example.com' &&
+        }
+        {/* {profileData.email !== 'jho@example.com' &&
           (<button onClick={menu} style={{borderRadius: "5px", height: "35px", marginLeft:"580px", borderColor:"blue", borderWidth:"2px", backgroundColor:"linear-gradient(to bottom, to top, to left, to right, #1E90FF, #00BFFF"}} >
             Menu
             <div style={{display:"none"}}>
               <MenuPage name={profileData.restaurantName}/>
             </div>
           </button>)
-        }
+        } */}
       </div>
       
       <div className="profile-info">
@@ -156,7 +158,7 @@ return (
       <button className="logout-button" onClick={handleLogout}>
         Logout
       </button>
-      {/* {isAddMenuPopupOpen && (
+      {isAddMenuPopupOpen ? (
         <AddMenuPopup
           onClose={() => setAddMenuPopupOpen(false)}
           onSave={(menuItemData) => {
@@ -166,7 +168,7 @@ return (
           }}
           email = {profileData.email}
         />
-      )} */}
+      )&&(<Main email = {profileData.email}/>): null}
     </div>
   );
 }

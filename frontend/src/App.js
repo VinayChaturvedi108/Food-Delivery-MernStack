@@ -26,8 +26,7 @@ import OwnerForgetPassword from './Components/OwnerForgetPassword';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)  
   const [userType, setUserType] =useState('');
-  const [location, setLocation]= useState("");
-  const [deliveryTime, setDeliveryTime]= useState("");
+
 
   const handleSetUserType = (type) =>{
     setUserType(type);
@@ -35,19 +34,13 @@ function App() {
   const handleSetLoggedIn = (status) =>{
     setLoggedIn(status);
   }
-  const handleSetLocation = (address) =>{
-    setLoggedIn(address);
-  }
-  const handleSetdeliveryTime = (min) =>{
-    setLoggedIn(min);
-  }
   return (
     <div className="App">
       <Router>
         <Navbar userType={userType} loggedIn={loggedIn}/>
         <div className="con">
         <Routes>
-          <Route exact path="/" element={<Home onSetdelivery={handleSetdeliveryTime}/>}>
+          <Route exact path="/" element={<Home />}>
           </Route>
           <Route exact path="/about" element={<About/>}>
           </Route>
@@ -61,7 +54,7 @@ function App() {
           </Route>
           <Route exact path="/ownlogin" element={<OwnerLogin onSetUserType={handleSetUserType} onSetLoggedIn={handleSetLoggedIn}/>}>
           </Route>
-          <Route exact path="/profile" element={<Profile onSetLoggedIn={handleSetLoggedIn} onSetLocation={handleSetLocation}/>}>
+          <Route exact path="/profile" element={<Profile onSetLoggedIn={handleSetLoggedIn} />}>
           </Route>
           <Route exact path="/ownprofile" element={<OwnProfile onSetLoggedIn={handleSetLoggedIn}/>}>
           </Route>
@@ -70,8 +63,8 @@ function App() {
           <Route exact path="/updateOwnPassword" element={<OwnerForgetPassword onSetUserType={handleSetUserType} onSetLoggedIn={handleSetLoggedIn}/>}>
           </Route>
           <Route exact path="/showMenuItem" element={<MenuPage onSetLoggedIn={handleSetLoggedIn}/>}></Route>
-          {/* <Route exact path="/showMenuItem" element={<Menu onSetLoggedIn={handleSetLoggedIn}/>}></Route> */}
-          <Route exact path="/paymentPage" element={<PaymentPage location_1 = {location} deliveryTime={deliveryTime} onSetLoggedIn={handleSetLoggedIn}/>}></Route>
+          {/* <Route exact path="/addData" element={<Menu onSetLoggedIn={handleSetLoggedIn}/>}></Route> */}
+          <Route exact path="/paymentPage" element={<PaymentPage onSetLoggedIn={handleSetLoggedIn}/>}></Route>
 
       </Routes>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 // import PaymentPage from './Payment';
 // import './MenuPage.css'; // Make sure to create this CSS file
@@ -72,63 +72,6 @@ const MenuPage = ({onSetLoggedIn}) => {
         removeFromCart()
       }
   };
-
-  // useEffect(() => {
-    //   // Fetch data from backend API
-  //   const fetchMenuData = async () => {
-  //     try {
-        
-    //       ////////////////////////////////////////////////////////////////////////
-  //       // Fetch menu item data from the backend API
-  //       const response = await fetch('/showMenuItem', {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-            // 'Authorization': 'Bearer ' + localStorage.getItem('token') 
-  //         },
-  //       });
-  
-  //       if (response.ok) {
-  //         const data = await response.json();
-  //         console.log(data.itemDetails); // Log the fetched data
-  //         setExtractedMenuItems(data.itemDetails); // Update state with fetched data
-  //       } else {
-  //         console.log('Error fetching menu items:', response.statusText); // Log other error statuses
-  //       }
-  //     } catch (error) {
-  //       console.error('Error fetching menu items:', error); // Log any exceptions
-  //     }
-  //   };
-  //   fetchMenuData();
-  // }, [navigate]);
-
-  
-//   useEffect(() => {
-//     const fetchProfileData = async () => {
-//     try {
-//       // Fetch user's profile data from the backend API
-//       const response = await fetch('/ownprofile', {
-//         method: 'GET',
-//         headers: {
-//           'Content-Type': 'application/json',
-//           'Authorization': 'Bearer ' + localStorage.getItem('token') // Set the token in the Authorization header
-//         },
-//       });
-      
-//       if (response.ok) {
-//         const data = await response.json();
-//         console.log(data)
-//         setOwnData(data);
-//         onSetLoggedIn(true)
-//       } else if (response.status === 401) {
-//         navigate('/ownlogin'); // Redirect to login page if not authenticated
-//       }
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-//   fetchProfileData();
-// }, [navigate, onSetLoggedIn]);
 
 const handleCheckout = (locate) => {
   // Calculate the total amount
